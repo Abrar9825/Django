@@ -1,0 +1,29 @@
+<!-- showData.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+</head>
+<body>
+    <h1>Student Data</h1>
+    <table border="1">
+        <tr>
+            <th>Enrollment Number</th>
+            <th>Username</th>
+            <th>Subject 1</th>
+            <th>Subject 2</th>
+        </tr>
+        {% for student in studentDatalist %}
+        <tr>
+            <td>{{ student.enrollment }}</td>
+            <td>{{ student.username }}</td>
+            <td>{{ student.subject1 }}</td>
+            <td>{{ student.subject2 }}</td>
+        </tr>
+        {% endfor %} 
+    </table>
+</body>
+</html>

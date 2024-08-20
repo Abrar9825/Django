@@ -1,0 +1,90 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save Marks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 100px;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        h2,
+        h1 {
+            color: #007bff;
+            margin: 0;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ced4da;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="{% static 'images/university_logo.jpeg' %}" alt="University Logo" class="logo">
+            <h1>GLS UNIVERSITY</h1>
+        </div>
+        <h2>Enter Marks:</h2>
+        <form action='/SaveMarks/' method="post">
+            {% csrf_token %}
+            <label for="EnNo">Enrollment Number:</label>
+            <input type="text" id="EnNo" name="EnNo"><br><br>
+
+            <label for="Uname">Username:</label>
+            <input type="text" id="Uname" name="Uname"><br><br>
+
+            <label for="Subject1">Subject 1:</label>
+            <input type="text" id="Subject1" name="Subject1"><br><br>
+
+            <label for="Subject2">Subject 2:</label>
+            <input type="text" id="Subject2" name="Subject2"><br><br>
+
+            <input type="submit" value="Save Marks">
+        </form>
+    </div>
+</body>
+
+</html>
