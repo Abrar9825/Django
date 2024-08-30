@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1" style="text-align: center;">
+        <th>Name</th>
+        <th>Enrollment</th>
+        <th> java Marks</th>
+        <th>Python Marks</th>
+        {%for stud in dataStored%}
+        <tr>
+            <td>{{stud.name}}</td>
+            <td>{{stud.enroll}}</td>
+            <td>{{stud.jmarks}}</td>
+            <td>{{stud.pmarks}}</td>
+            <td><a href="{% url 'deleteData' name=stud.name %}">Delete</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/search">Search Student</a>
+</body>
+
+</html>

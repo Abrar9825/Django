@@ -1,2 +1,4 @@
 /env_site
+venv
 .venv
+.gitignore
