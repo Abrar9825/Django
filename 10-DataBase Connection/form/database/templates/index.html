@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Form</title>
+</head>
+<body>
+    <form action="/savedata" method="get">
+        <label for="no">No:</label>
+        <input type="number" name="no" id="no" placeholder="Enter Your Enroll" required><br>
+
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter Name" required><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" id="male" required>
+        <label for="male">Male</label><br>
+        <input type="radio" name="gender" value="Female" id="female" required>
+        <label for="female">Female</label><br>
+
+        <label>Hobbies:</label><br>
+        <input type="checkbox" name="hobbies" value="Sports" id="sports">
+        <label for="sports">Sports</label><br>
+        <input type="checkbox" name="hobbies" value="Music" id="music">
+        <label for="music">Music</label><br>
+        <input type="checkbox" name="hobbies" value="Art" id="art">
+        <label for="art">Art</label><br>
+
+        <label for="course">Course:</label>
+        <select name="course" id="course">
+            <option value="Math">Math</option>
+            <option value="Science">Science</option>
+            <option value="History">History</option>
+            <option value="Literature">Literature</option>
+        </select><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

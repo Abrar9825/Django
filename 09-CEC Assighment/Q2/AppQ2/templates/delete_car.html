@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Car</title>
+</head>
+<body>
+        <h2>Delete Car</h2>
+        <table border="1px">
+            <tr>
+                <th>Model</th>
+                <th>Price</th>
+            </tr>
+            {% for car in cars %}
+
+            <tr>
+                <td> {{ car.model }}</td>
+                <td> Rs-{{ car.price }}</td>
+                <td><a href="{% url 'delete_car' car.model %}" class="btn btn-danger">Delete</a></td>
+            </tr>
+            {% endfor %}
+        </table>
+</body>
+</html>

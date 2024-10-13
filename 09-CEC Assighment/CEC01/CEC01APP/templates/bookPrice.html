@@ -1,0 +1,38 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter By Price</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <h1>Filter By Price</h1>
+    <div class="cont">
+        <form action="/bookPriceFilter/" method="POST">
+            {% csrf_token %}
+            <input type="number" name="price" placeholder="Enter a Max Price" required>
+            <button type="submit">Filter</button>
+        </form>
+    </div>
+
+    <div class="result">
+        {% if books %}
+        <h2>Books Under Your Price</h2>
+        {% for book in books %}
+        <p>
+            {{ book.title }} by {{ book.author }} - ₹{{ book.price }}
+        </p>
+        {% endfor %}
+        {% else %}
+        <p>No books found under this price.</p>
+        {% endif %}
+    </div>
+
+    <a href="/index">Back to Home</a>
+</body>
+
+</html>

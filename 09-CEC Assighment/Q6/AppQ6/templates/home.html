@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><img src="{% static 'images/logo.png' %}" alt="Website Logo"></li>
+                <li><a href="{% url 'login' %}" class="btn">Login</a></li>
+                <li><a href="{% url 'signup' %}" class="btn">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="container">
+        <h2>List of Registered Users</h2>
+        <ul>
+            {% for user in users %}
+            <li>{{ user.username }} ({{ user.email }})</li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

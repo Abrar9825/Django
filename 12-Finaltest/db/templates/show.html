@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Marks1</th>
+            <th>Marks3</th>
+            <th>Marks3</th>
+            <th>Name</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+        {% for db_data in data %}
+        <tr>
+            <td>{{db_data.m1}}</td>
+            <td>{{db_data.m2}}</td>
+            <td>{{db_data.m3}}</td>
+            <td>{{db_data.name}}</td>
+            <td>{{db_data.total}}</td>
+            <td><a href="{% url 'delete' db_data.name %}">Delete</a></td>
+        </tr>
+        {%endfor%}
+    </table>
+
+    <form action="/serach/" method="post">
+        {%csrf_token%}
+        total: <input type="number" name="total">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

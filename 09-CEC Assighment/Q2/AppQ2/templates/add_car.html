@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Car</title>
+</head>
+<body>
+        <h2>Add Car</h2>
+        <form method="POST">
+            {% csrf_token %}
+                <label for="model">Car Model</label>
+                <input type="text" name="model" >
+                <label for="price">Car Price</label>
+                <input type="number" name="price" >
+            <button type="submit">Add Car</button>
+        </form>
+    </div>
+
+</body>
+</html>

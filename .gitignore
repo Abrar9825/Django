@@ -1,4 +1,36 @@
-/env_site
-venv
-.venv
-.gitignore
+# Python
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+db.sqlite3
+
+# Django
+*.log
+*.pot
+*.py[cod]
+*.sqlite3
+/staticfiles/
+media/
+
+# Virtual environments
+env/
+venv/
+.venv/
+env_site/
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# Local environment variables
+.env
+
+# Ignore Django locale files
+locale/

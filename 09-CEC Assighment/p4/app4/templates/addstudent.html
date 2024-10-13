@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+</head>
+<body>
+        
+        <form method="GET" action="/adddata/">
+        Student No:
+                <input type="text" name="student_no" ><br>
+        Student Name:
+                <input type="text"  name="student_name" ><br>
+        Theory Subject 1 Marks:
+                <input type="text"  name="theory1" ><br>
+        Theory Subject 2 Marks:
+                <input type="text"  name="theory2" ><br>
+        Theory Subject 3 Marks:
+                <input type="text"  name="theory3" ><br>
+        Practical Subject 1 Marks:
+                <input type="text"  name="practical1" ><br>
+        Practical Subject 2 Marks:
+                <input type="text" name="practical2" ><br>
+        <input type="submit" name="submit">
+            
+        </form>
+    
+</body>
+</html>

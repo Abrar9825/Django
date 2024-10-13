@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter By Price</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="result">
+        {% if bikesData %}
+            <h2>Bikes That are Available</h2>
+            <table>
+                <tr>
+                    <th>Bike Name</th>
+                    <th>Bike Colors</th>
+                    <th>Bike Price</th>
+                    <th>Action</th>
+                </tr>
+                {% for bike in bikesData %}
+                <tr>
+                    <td>{{ bike.name }}</td>
+                    <td>{{ bike.color }}</td>
+                    <td>₹{{ bike.price }}</td>
+                    <td><a href="{% url 'deleteData' bike.name %}">Delete</a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        {% else %}
+            <p>No bikes found.</p>
+        {% endif %}
+    </div>
+
+    <a href="/index">Back to Home</a>
+</body>
+
+</html>

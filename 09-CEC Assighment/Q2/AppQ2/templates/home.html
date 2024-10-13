@@ -1,0 +1,32 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+
+</head>
+<body>
+
+    <header class="bg-primary text-white text-center">
+        <h1>Welcome to Car Management System</h1>
+    </header>
+
+    <div class="container mt-5">
+        <h2>Manage Your Cars Efficiently</h2>
+        <img src="{% static 'images /carshowroom.jpg' %}" alt="Car Image" class="img-fluid" style="max-width: 500px; height: auto;">
+        <a href="/add_car/" class="btn btn-success mt-3">Add Car</a>
+        <a href="/delete_car/" class="btn btn-danger mt-3">Delete Car</a>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <p>&copy; 2024 Car Management System</p>
+    </footer>
+
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+</body>
+</html>
+

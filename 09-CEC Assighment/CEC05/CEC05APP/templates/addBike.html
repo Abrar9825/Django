@@ -1,0 +1,24 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Bike</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <h1>Add New Bike</h1>
+    <form action="/addBikes/" method="POST">  <!-- Change action to /addBikes/ -->
+        {% csrf_token %}
+        <input type="text" name="name" placeholder="Enter Model Name" required>
+        <input type="text" name="color" placeholder="Enter Color" required>
+        <input type="number" name="price" placeholder="Enter Price" required>
+        <input type="submit" value="Submit">
+    </form>
+    <a href="/showData">Go to View Bikes</a>
+</body>
+
+</html>

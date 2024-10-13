@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="path_to_your_offline_bootstrap/bootstrap.min.css">
+</head>
+<body>
+                
+        <table border="1">
+        
+            <tr>
+                <th>Student No</th>
+                <th>Student Name</th>
+                <th>Theory 1</th>
+                <th>Theory 2</th>
+                <th>Theory 3</th>
+                <th>Practical 1</th>
+                <th>Practical 2</th>
+                <th>Result</th>
+                
+            </tr>
+            {% for student in students %}
+            <tr>
+                <td>{{ student.student_no }}</td>
+                <td>{{ student.student_name }}</td>
+                <td>{{ student.theory1 }}</td>
+                <td>{{ student.theory2 }}</td>
+                <td>{{ student.theory3 }}</td>
+                <td>{{ student.practical1 }}</td>
+                <td>{{ student.practical2 }}</td>
+                <td>{{student.result}}</td>
+            </tr>
+            
+            {% endfor %}
+        </table>
+        
+   
+</body>
+</html>

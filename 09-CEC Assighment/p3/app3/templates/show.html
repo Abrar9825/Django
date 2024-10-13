@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	
+	<table border="1">
+		<tr>
+			<th> College Name</th>
+			<th> College City</th>
+		</tr>
+		{% for college in colleges %}
+		<tr>
+			<td>{{college.collegename}}</td>
+			<td>{{college.collegecity}}</td>
+		</tr>
+		{% endfor %}
+	</table>
+	<a href="{% url 'search' %}">Search College city</a>
+
+</body>
+</html>
